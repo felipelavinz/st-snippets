@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[class ${1:WidgetClassname} extends \WP_Widget{
+	public function __construct(){
+		parent::__construct(
+			'${2:base_id}',
+			_x('${3:widget title}', 'widget title', '${4:localization domain}'),
+			array(
+				'description' => __('${5:widget description}', '${4}'),
+				'classname' => '${6:widget html classes}',
+			),
+			array(
+				'width' => ${7:form width (default is 250)}
+			)
+		);
+	}
+	public function widget( \$args, \$instance ){
+
+	}
+	public function form( \$instance ){
+
+	}
+	public function update( \$new_instance, \$old_instance ){
+		return \$new_instance;
+	}
+}
+add_action('widgets_init', function(){
+	register_widget('${1}');
+});]]></content>
+	<tabTrigger>wp_widget</tabTrigger> -->
+	<scope>source.php</scope>
+</snippet>

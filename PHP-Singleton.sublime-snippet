@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+class ${1:Nombre de función de la clase}{
+	private static \$instance;
+	private function __construct(){
+
+	}
+	public static function getInstance(){
+		if ( !isset(self::\$instance) ){
+			\$c = __CLASS__;
+			self::\$instance = new \$c;
+		}
+		return self::\$instance;
+	}
+	public function __clone(){
+		trigger_error('Clone is not allowed.', E_USER_ERROR);
+	}
+}
+// Instantiate the class object
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

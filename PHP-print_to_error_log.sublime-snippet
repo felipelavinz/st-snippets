@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[error_log( print_r(${1}, true) );]]></content>
+	<tabTrigger>error</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

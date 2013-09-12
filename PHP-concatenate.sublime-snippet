@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[\$out .= '${1:$SELECTION}';]]></content>
+	<tabTrigger>out</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

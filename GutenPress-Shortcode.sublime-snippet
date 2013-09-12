@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[class ${1:Shortcode class name} extends \GutenPress\Model\Shortcode{
+	public function setTag(){
+		\$this->tag = '${2:Shortcode tag}';
+	}
+	public function setFriendlyName(){
+		\$this->friendly_name = _x('${3:Friendly Name}', '${2} shortcode name', '${4:text domain}');
+	}
+	public function setDescription(){
+		\$this->description = _x('${5:Description}', '${2} shortcode description', '${4}');
+	}
+	public function display( \$atts, \$content ){
+		\$s = shortcode_atts(array(
+		), \$atts);
+	}
+	public function configForm(){
+
+	}
+}
+\GutenPress\Model\ShortcodeFactory::create('${1}');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

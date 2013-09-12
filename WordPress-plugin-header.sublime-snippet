@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[<?php
+/*
+Plugin Name: ${1:Nombre del plugin}
+Plugin URI: ${2:URL del plugin}
+Description: ${3:Descripción}
+Version: ${4:Versión}
+Author: ${5:Nombre del autor}
+Author URI: ${6:URL del autor}
+License: ${7:Licencia}
+*/
+]]></content>
+</snippet>

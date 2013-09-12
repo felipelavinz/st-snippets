@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+class ${1:Widget_Class} extends WP_Widget {
+	public function __construct() {
+		parent::__construct(
+	 		'${2:Base_ID}', // Base ID
+			'${3:Widget name}', // Name
+			array( 'description' => __( '${4:Widget_Description}', '${5:Widget_Textdomain}' ), ) // Args
+		);
+	}
+ 	public function form( \$instance ) {
+		// outputs the options form on admin
+	}
+	public function update( \$new_instance, \$old_instance ) {
+		// processes widget options to be saved
+		return \$new_instance;
+	}
+	public function widget( \$args, \$instance ) {
+		// outputs the content of the widget
+	}
+}
+// register Foo_Widget widget
+add_action( 'widgets_init', create_function( '', 'register_widget( "${1}" );' ) );
+]]></content>
+	<tabTrigger>class WP_Widget</tabTrigger>
+	<scope>source.php</scope>
+</snippet>
